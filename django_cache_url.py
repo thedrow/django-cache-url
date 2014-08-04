@@ -15,6 +15,7 @@ urlparse.uses_netloc.append('file')
 urlparse.uses_netloc.append('locmem')
 urlparse.uses_netloc.append('memcached')
 urlparse.uses_netloc.append('djangopylibmc')
+urlparse.uses_netloc.append('pylibmc')
 urlparse.uses_netloc.append('pymemcached')
 urlparse.uses_netloc.append('redis')
 urlparse.uses_netloc.append('hiredis')
@@ -28,6 +29,7 @@ CACHE_TYPES = {
     'locmem': 'django.core.cache.backends.locmem.LocMemCache',
     'memcached': 'django.core.cache.backends.memcached.PyLibMCCache',
     'djangopylibmc': 'django_pylibmc.memcached.PyLibMCCache',
+    'pylibmc': 'django.core.cache.backends.memcached.PyLibMCCache',
     'pymemcached': 'django.core.cache.backends.memcached.MemcachedCache',
     'redis': 'redis_cache.cache.RedisCache',
     'hiredis': 'redis_cache.cache.RedisCache',
